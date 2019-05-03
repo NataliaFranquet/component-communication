@@ -66,6 +66,8 @@
   background: yellow;
 }
 
-h2 {
+h2,
+button
+ {
   font-size: 45px;
 }

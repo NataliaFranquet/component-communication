@@ -11,6 +11,14 @@ class Red extends React.Component {
 
   // }
 
+  communicateWithParent() {
+    console.log("Communication with RED happens!")
+
+    this.setState({
+      value: 1000
+    })
+  }
+
   changeState() {
     this.setState({
       value: 20
@@ -21,9 +29,9 @@ class Red extends React.Component {
     return (
       <div className="component red">
         <h1>RED</h1>
-        <button onClick={() => this.changeState()}>Change state</button>
+        <button onClick={() => this.changeState()}>Propagate state from RED to YELLOW (descending)</button>
         <h2>{this.state.value}</h2>
-        <Aquamarine valueIron={this.state.value}></Aquamarine>
+        <Aquamarine valueIron={this.state.value} communicateWithParent={() => this.communicateWithParent()}></Aquamarine>
         <Aquamarine></Aquamarine>
       </div>
     )

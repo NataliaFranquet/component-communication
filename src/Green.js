@@ -3,12 +3,19 @@ import Yellow from './Yellow';
 
 class Green extends React.Component {
   state = {
-
+    firstYellowBoxVisible : true
   }
 
   // constructor() {
   //   super()
 
+  // }
+
+  // communicateWithParent() {
+  //   console.log("Communication happens!")
+  //   this.setState({
+  //     firstYellowBoxVisible: false
+  //   })
   // }
 
   render () {
@@ -17,7 +24,9 @@ class Green extends React.Component {
         <h1>GREEN</h1>
         <h2>{this.props.valueIron}</h2>
         <ul>
-            <li><Yellow valueIron={this.props.valueIron}></Yellow></li>
+            {
+              this.state.firstYellowBoxVisible ? <li><Yellow communicateWithParent={() => this.props.communicateWithParent()} valueIron={this.props.valueIron}></Yellow></li> : null
+            }
             <li><Yellow></Yellow></li>
             <li><Yellow></Yellow></li>
             <li><Yellow></Yellow></li>
