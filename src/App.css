@@ -31,3 +31,41 @@
     transform: rotate(360deg);
   }
 }
+
+
+.component {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.red {
+  margin: 20px;
+  background: red;
+}
+
+.green {
+  background: green;
+  margin-bottom: 20px;
+}
+
+.green ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.green li {
+  margin-right: 20px;
+}
+
+.aquamarine {
+  background: aquamarine;
+  margin-bottom: 20px;
+}
+
+.yellow {
+  background: yellow;
+}
+
+h2 {
+  font-size: 45px;
+}
