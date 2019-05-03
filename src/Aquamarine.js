@@ -16,7 +16,7 @@ class Aquamarine extends React.Component {
       <div className="component aquamarine">
         <h1>Aquamarine</h1>
         <h2>{this.props.valueIron}</h2>
-        <Green valueIron={this.props.valueIron} communicateWithParent={() => this.props.communicateWithParent()}></Green>
+        <Green valueIron={this.props.valueIron} communicateWithParent={(randomTimesTen) => this.props.communicateWithParent(randomTimesTen)}></Green>
         <Green></Green>
       </div>
     )

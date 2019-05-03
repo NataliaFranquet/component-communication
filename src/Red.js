@@ -11,8 +11,8 @@ class Red extends React.Component {
 
   // }
 
-  communicateWithParent() {
-    console.log("Communication with RED happens!")
+  communicateWithParent(randomTimesTen) {
+    console.log("Communication with RED happens! " + randomTimesTen)
 
     this.setState({
       value: 1000
@@ -31,7 +31,7 @@ class Red extends React.Component {
         <h1>RED</h1>
         <button onClick={() => this.changeState()}>Propagate state from RED to YELLOW (descending)</button>
         <h2>{this.state.value}</h2>
-        <Aquamarine valueIron={this.state.value} communicateWithParent={() => this.communicateWithParent()}></Aquamarine>
+        <Aquamarine valueIron={this.state.value} communicateWithParent={(randomTimesTen) => this.communicateWithParent(randomTimesTen)}></Aquamarine>
         <Aquamarine></Aquamarine>
       </div>
     )

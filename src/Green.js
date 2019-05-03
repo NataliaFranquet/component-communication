@@ -25,7 +25,7 @@ class Green extends React.Component {
         <h2>{this.props.valueIron}</h2>
         <ul>
             {
-              this.state.firstYellowBoxVisible ? <li><Yellow communicateWithParent={() => this.props.communicateWithParent()} valueIron={this.props.valueIron}></Yellow></li> : null
+              this.state.firstYellowBoxVisible ? <li><Yellow communicateWithParent={(random) => this.props.communicateWithParent(random * 10)} valueIron={this.props.valueIron}></Yellow></li> : null
             }
             <li><Yellow></Yellow></li>
             <li><Yellow></Yellow></li>
